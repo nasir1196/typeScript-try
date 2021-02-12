@@ -38,6 +38,7 @@ let player = {
     salary: 454000,
 };
 console.log(player);
+// interface
 const messy = {
     name: "messy",
     age: 40,
@@ -57,3 +58,16 @@ function getBonus(player) {
     return player.salary * 0.1;
 }
 getBonus(messy);
+// oop
+class Person {
+    constructor(name, father) {
+        this.name = name;
+        this._partner = name;
+        this.fatherName = father;
+    }
+    getFullName() {
+        return this.name + " " + this._partner;
+    }
+}
+const sam = new Person("sam", "david");
+console.log(sam.name);

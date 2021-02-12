@@ -59,6 +59,7 @@ interface Player {
   isPlaying: boolean;
 }
 
+// interface
 const messy: Player = {
   name: "messy",
   age: 40,
@@ -81,3 +82,22 @@ function getBonus(player: Player) {
 }
 
 getBonus(messy);
+
+// oop
+class Person {
+  name: string;
+  private _partner: string;
+  readonly fatherName: string;
+  constructor(name: string, father: string) {
+    this.name = name;
+    this._partner = name;
+    this.fatherName = father;
+  }
+  getFullName(): string {
+    return this.name + " " + this._partner;
+  }
+}
+
+const sam = new Person("sam", "david");
+console.log(sam.name);
+
